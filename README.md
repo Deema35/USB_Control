@@ -1,2 +1,2 @@
 # USB_Control
-USB controller on Verilog
+[Создание USB контроллера на FPGA чипе и подключение клавиатуры](https://habr.com/ru/articles/1012850/)
