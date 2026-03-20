@@ -1,0 +1,148 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+# Date created = 07:10:39  October 23, 2025
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		USB_Control_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE15F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY USB_Controller
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "07:10:39  OCTOBER 23, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_location_assignment PIN_T2 -to clk_50
+set_location_assignment PIN_E4 -to LEDR
+set_location_assignment PIN_W13 -to RESET_N
+set_location_assignment PIN_Y13 -to KEY_N
+set_location_assignment PIN_A20 -to Usb_Dp
+set_location_assignment PIN_A15 -to Usb_Dm
+set_location_assignment PIN_M19 -to Analiz_Dp
+set_location_assignment PIN_N19 -to Analiz_Dm
+set_global_assignment -name QIP_FILE pll.qip
+set_global_assignment -name SYSTEMVERILOG_FILE M_USB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_CRC5.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CRC5_Test.sv
+set_global_assignment -name SYSTEMVERILOG_FILE USB_Test.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_USB_Slave.sv
+set_global_assignment -name SYSTEMVERILOG_FILE USB_Controller.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RESET_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Usb_Dp
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Usb_Dm
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_Dp
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_Dm
+set_global_assignment -name SYSTEMVERILOG_FILE M_SEND_TOKEN.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_CRC16_USB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CRC16_USB_Test.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SEND_DATA.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_DATA_TRANSFER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_TRANZACTION.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_DEVICE_DESCRIPTOR.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SET_ADDRESS.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_MEMORY_BUF.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_GET_REQUEST.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_GET_REQUEST_WITH_GET_DATA.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_GET_REQUEST_WITH_SEND_DATA.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_USB_INIT.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SOF_SENDER.sv
+set_location_assignment PIN_B21 -to Analiz_Num[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_Num[0]
+set_location_assignment PIN_C21 -to Analiz_Num[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_Num[1]
+set_location_assignment PIN_D21 -to Analiz_Num[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_Num[2]
+set_location_assignment PIN_E21 -to Analiz_Num[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_Num[3]
+set_global_assignment -name SYSTEMVERILOG_FILE M_SEND_PACKET.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_GET_DATA.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SEND_END_OF_PACKED.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_GET_PACKET.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_MAIN_AUTOMAT.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_HID_ANALIZ.sv
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name SYSTEMVERILOG_FILE M_RESIVE_MODULE.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_TRANSMITE_MODULE.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_DATA.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_MEMORY_BUF_CRC16.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_BUF_RETRONSLATOR.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_TEXT_CONTROLLER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_VIDEO_ADAPTER.sv
+set_global_assignment -name QIP_FILE VPLL.qip
+set_location_assignment PIN_B2 -to Green[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Green[0]
+set_location_assignment PIN_C2 -to Green[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Green[1]
+set_location_assignment PIN_D2 -to Green[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Green[2]
+set_location_assignment PIN_F2 -to Green[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Green[3]
+set_location_assignment PIN_H2 -to Red[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Red[0]
+set_location_assignment PIN_J2 -to Red[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Red[1]
+set_location_assignment PIN_M2 -to Red[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Red[2]
+set_location_assignment PIN_N2 -to Red[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Red[3]
+set_location_assignment PIN_P2 -to Vsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Vsync
+set_location_assignment PIN_R2 -to Hsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Hsync
+set_location_assignment PIN_AA13 -to Blue[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue[3]
+set_location_assignment PIN_AA14 -to Blue[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue[2]
+set_location_assignment PIN_AA15 -to Blue[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue[1]
+set_location_assignment PIN_AA16 -to Blue[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue[0]
+set_global_assignment -name SYSTEMVERILOG_FILE M_SCREEN_RAM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_STRING_BUFFER_FILLER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_UNICODE_TABLE.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SCREEN.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_HID_CODE_TABLE.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_INICIALIZATION_FAIL.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SCREEN_CLANER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_FONT_ROM.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
